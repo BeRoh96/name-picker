@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Picker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Name Picker</h1>
+    </header>
+    <div id="container">
+      <section id="user-names">
+        <h2>Names</h2>
+        <input type="text" v-model="enteredNameValue" @keyup.enter="addName" />
+        <button @click="addName">Add Name</button>
+        <ul>
+          <li v-for="(name, key, index) in names" :key="index">
+            <input
+              :id="name"
+              type="checkbox"
+              :value="name"
+              v-model="namesToChooseFrom"
+            />
+            <label for="name">{{ name }}</label>
+            <button id="destroy" @click="removeName(name)">X</button>
+          </li>
+        </ul>
+        <div id="picked-name">
+          <button class="divContent" id="pickNameButton" @click="pickName">
+            GO!
+          </button>
+          <span class="divContent" id="chosenName">{{ chosenName }}</span>
+        </div>
+      </section>
+      <div id="randomizer">
+        <h2>Randomizer</h2>
+        <v-card v-for="(name, key, index) in namesToChooseFrom"></v-card>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #428df5;
+  color: white;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#user-names {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 20%;
+}
+
+#randomizer {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 80%;
+}
+
+#user-names h2,
+#randomizer h2 {
+  font-size: 2rem;
+  border-bottom: 4px solid #ccc;
+  color: #428df5;
+  margin: 0 0 1rem 0;
+}
+
+#user-names ul {
+  list-style: none;
+  width: 10%;
+}
+
+#user-names li {
+  font-weight: bold;
+  color: #1f1f1f;
+  width: 100%;
+}
+
+#user-names input {
+  font: inherit;
+  border: 1px solid #ccc;
+}
+
+#user-names input:focus {
+  outline: none;
+  border-color: #1b995e;
+  background-color: #d7fdeb;
+}
+
+#user-names button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #ff0077;
+  background-color: #ff0077;
+  color: white;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+}
+
+#user-names button:hover,
+#user-names button:active {
+  background-color: #ec3169;
+  border-color: #ec3169;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+
+#user-names div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#user-names label {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.divContent {
+  margin-left: 300px;
+  margin-right: auto;
+}
+
+#user-names span {
+  font-size: larger;
+}
+
+#user-names #destroy {
+  margin-left: 40px;
+  height: 25px;
+}
